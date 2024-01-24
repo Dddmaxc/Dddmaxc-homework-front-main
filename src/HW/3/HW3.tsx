@@ -18,7 +18,11 @@ export const HW3 = () => {
 		setCurrentText(event.currentTarget.value)
 	}
 
-	const handleSave = () => {}
+	const handleSave = (currentText: string) => {
+		let newText = [currentText]
+		setTexts(newText)
+		setCurrentText('')
+	}
 
 	return (
 		<div id={'hw03'}>
@@ -38,7 +42,7 @@ export const HW3 = () => {
 			<button
 				id={'hw03-button'}
 				onClick={() => {
-					handleSave()
+					handleSave(currentText)
 				}}
 			>
 				// НЕ ХВАТАТЕТ ФУНКЦИИ Сохранить
